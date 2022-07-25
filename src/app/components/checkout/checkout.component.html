@@ -1,0 +1,51 @@
+<body class="profile-page">
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('https://lirp.cdn-website.com/37bf5133/dms3rep/multi/opt/Hamilton-Honda-Hyundai-Auto-Spares-About-Gears-640w.jpg'); width:100%;  "></div>
+  
+    <div class="main main-raised">
+      <div class="profile-content">
+        <div class="container">
+          <div class="row" >
+            <div class="profile">
+              <div class="name">
+                <h3 class="title">Checkout</h3>
+              </div>
+              <form class="form-group">
+              <h4>{{this.msg}}</h4>
+              <div class="col-md-12">
+                <div class="col-md-4">
+                  <h4 class="title">Name</h4>
+                </div>
+                <div class="col-md-4">
+                  <h4 class="title">Price</h4>
+                </div>
+                <div class="tab-pane active" id="studio" *ngFor="let i of this.lis">
+                  <div class="col-md-12">
+                    <app-checkoutcard [Part]="i" ></app-checkoutcard>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="col-md-4">
+                    <h4 class="title">Total</h4>
+                  </div>
+                  <div class="col-md-4">
+                    <h4 class="title">{{this.total}}</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <button  class="btn btn-primary" (click)="checkout()">Checkout Parts</button>
+                <button class="btn btn-danger" (click)="cancelCheckout()">Cancel</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  </body>
+  
+  

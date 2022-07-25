@@ -1,0 +1,77 @@
+<body class="profile-page">
+
+  <div class="wrapper">
+    <div class="header header-filter" >
+      <!-- <img src="{{this.img}}" width="100%" height="700"> -->
+      <img src="https://static3.bigstockphoto.com/2/0/3/large1500/302421448.jpg" width="100%" height="700">
+    </div>
+  
+    <div class="main main-raised">
+      <div class="profile-content">
+        <div class="container">
+          <div class="row">
+            <div class="profile">
+              <div class="name">
+                <h3 class="title">Part name : {{part.name}}</h3>
+                <h6>{{rating| number:'1.1-2'}}/5.0</h6>
+                <div id="rate">
+                  <button class="btn btn-simple btn-primary btn-sm" (click)="showRate()">Rate This part</button>
+                  <div class="col-md-12" id="ratediv" align="center">
+                    <input class="form-control" placeholder="Enter your rating here" id="myrate" >
+                    <button class="btn-primary btn-simple btn" id="ratebtn" (click)="saveRate()">done</button>
+                    <button class="btn-danger btn-simple btn" id="cancelratebtn" (click)="closeRate()">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description text-center">
+            <p>{{part.description}}</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="profile-tabs">
+                <div class="name" align="center">
+                  <h3 class="title">Brand</h3>
+                  <!-- <div *ngFor="let i of this.part.brand">
+                    <p>{{i}}</p><br>
+                  </div> -->
+                  <p>{{part.brand}}</p>
+                </div>
+                <div class="name" align="center">
+                  <h3 class="title">Price</h3>
+                  <p>{{part.price}}</p>
+                </div>
+                <div class="name" align="center">
+                  <h3 class="title">Comments</h3>
+                  <div *ngFor="let i of this.users">
+                    <p><b>{{i}} :</b> {{this.part.comments[i]}}</p><br>
+                  </div>
+                </div>
+              </div>
+              <form class="form-group">
+                <div id="comment">
+                <p align="center">Add new comment: <button class="btn btn-simple btn-primary btn-sm" (click)="showComment()">Add New</button></p>
+                <div class="col-md-12" id="commentdiv" align="center">
+                  <input class="form-control" placeholder="Enter your new comment here" id="mycomment" >
+                  <button class="btn-primary btn-simple btn" id="commentbtn" (click)="saveComment()">done</button>
+                  <button class="btn-danger btn-simple btn" id="cancelbtn" (click)="closeComment()">Cancel</button>
+                </div>
+                </div>
+              </form>
+              <!-- End Profile Tabs -->
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  </body>
+  

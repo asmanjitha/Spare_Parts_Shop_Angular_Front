@@ -1,0 +1,76 @@
+<body class="profile-page">
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('https://media.istockphoto.com/photos/car-engine-detail-picture-id856707194?s=612x612'); width:100%;  "></div>
+  
+    <div class="main main-raised">
+      <div class="profile-content">
+        <div class="container">
+          <div class="row" >
+            <div class="profile">
+              <div class="name">
+                <h3 class="title">Add New Part</h3>
+              </div>
+              <form class="form-group">
+              <div class="row col-md-6">
+                <div class="col-sm-12 col-md-12">
+                    <h4>Part name</h4>
+                    <input  placeholder="Enter spare part name" class="form-control" required="true" name="name" [(ngModel)]="name"/>
+                    <br>
+                    <h4>Description</h4>
+                    <textarea class="form-control" placeholder="Please enter a brief description for the spare part" rows="5" required="true"
+                              name="description" [(ngModel)]="description"></textarea>
+                    <br>
+                    <h4>Brand</h4>
+                    <div class="row">
+                      <input placeholder="Enter Brand" class="form-control" name="ingredient" [(ngModel)]="brand">
+                    </div>
+                    <br>
+                    <h4>Price</h4>
+                    <textarea class="form-control" placeholder="Enter the price" rows="1" required="true"
+                              name="price" [(ngModel)]="price"></textarea>
+                    <br>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4>Conditions</h4>
+                <div class="row">
+                  <input name="heal" [(ngModel)]="condition" placeholder="Enter part conditions" class="form-control"/>
+                  <!-- <button class="btn btn-success" (click)="addHealth()">add</button>
+                  <div class="row col-md-12" *ngFor="let i of health">
+                    <p>{{i}}</p>
+                  </div> -->
+                </div>
+                <br>
+                <h4>Suitable Vehicle Type</h4>
+                <div class="row">
+                  <input name="occasion" [(ngModel)]="vehicle_type" placeholder="Enter suitable vehicle type" class="form-control"/>
+                  <!-- <button class="btn btn-success" (click)="addOccasions()">add</button>
+                  <div class="row col-md-12" *ngFor="let i of occasions">
+                    <p>{{i}}</p>
+                  </div> -->
+                </div>
+                <br>
+                <h4>Image</h4>
+                <input name="img" [(ngModel)]="img" placeholder="Enter image URL" class="form-control" required="true" />
+                <br>
+              </div>
+                <div class="row">
+                  <button  class="btn btn-primary" (click)="savePart()">Save Part</button>
+                  <button class="btn btn-danger" (click)="cancelAdding()">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  </body>
+  
+  

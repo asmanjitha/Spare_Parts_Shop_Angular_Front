@@ -1,0 +1,19 @@
+<div class="card card-nav-tabs" style="background-color: #f8f1f5">
+  <div class="header" style="background-color: #fff8fc;
+  background-size: cover">
+    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+    <img class="img-src" src="{{Part.img}}" height="100%" width="100%">
+  </div>
+  <div class="content">
+    <h3 class="header-primary text-center">{{Part.name}}</h3>
+    <div class="tab-content text-center">
+      <div class="tab-pane active">
+        <p>{{Part.description}} </p>
+      </div>
+      <div>
+        <a [routerLink] = "['/editpart',Part._id]"><button class="btn btn-simple btn-primary btn-lg">Edit Part</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>

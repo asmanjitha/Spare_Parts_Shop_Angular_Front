@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-transparent navbar-absolute">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navigation-example">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink] = "['/home']">T’S AUTO SPARE PARTS</a>
+    </div>
+
+    <div class="collapse navbar-collapse " id="navigation-example">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="profile">
+          <a class="btn btn-simple" style="color: #ffffff;" [routerLink] = [this.address]><h4>{{this.name}}</h4> </a>
+        </li>
+        <li id="checkout">
+          <a class="btn btn-simple" style="color: #ffffff;" (click) = "checkout()"><h4>Checkout</h4> </a>
+        </li>
+        <li id="login">
+          <a class="btn btn-simple" style="color: #ffffff;" (click)="logout()"><h4>Log Out</h4> </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,72 @@
+<body class="profile-page">
+<div class="wrapper">
+  <div class="header header-filter" style="background-image: url('https://static3.bigstockphoto.com/2/0/3/large1500/302421448.jpg'); width:100%;  "></div>
+
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="profile">
+            <div class="name">
+              <h3 class="title">Search Spare Parts</h3>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="container-fluid row " style="background: #7b1fa2">
+            <div class="col-md-4">
+              <label class="h4" for="sel1" style="color: #ffffff;">Select search option:</label>
+              <select class="form-control h4" id="sel1" name="searchcategory" [(ngModel)]="searchcategory" style="text-align: center; font-size: larger; color: #ffffff;">
+                <option class="h3" style="background: #ffffff" value="Select" disabled="disabled">Select search option</option>
+                <option class="h3" style="background: #7b1fa2">Brand</option>
+                <option class="h3" style="background: #7b1fa2">Condition</option>
+                <option class="h3" style="background: #7b1fa2">Vehicle Type</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control h4" placeholder="Type key words" name="keyword" [(ngModel)]="keyword" style="color: #ffffff;">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="row">
+                <label></label>
+              </div>
+              <button class="btn btn-info" (click)="partSearch()" style="align-items: center;">
+                Search Spare Parts
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+              <div>
+
+                <div class=" gallery">
+                  <div >
+                    <h4 align="center">{{this.msg}}</h4>
+                  </div>
+                  <div class="tab-pane active" id="studio" *ngFor="let i of this.lis">
+                    <div class="col-sm-4">
+                      <app-recipecard [Part]="i" [User]="this.user" [SearchPage] = "this.instance"></app-recipecard>
+                    </div>
+                  </div>
+
+                </div>
+            <!-- End Profile Tabs -->
+              </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+</body>

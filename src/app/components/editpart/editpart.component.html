@@ -1,0 +1,105 @@
+<body class="profile-page">
+
+  <div class="wrapper">
+    <div class="header header-filter" >
+      <img src="{{this.part.img}}" width="100%" height="700">
+    </div>
+  
+    <div class="main main-raised">
+      <div class="profile-content">
+        <div class="container">
+          <form class="form-group">
+            <div class="row">
+              <div class="profile">
+                <button class="btn btn-simple btn-primary btn-sm" (click)="showImg()">Edit Image</button>
+                <div class="col-md-12" id="imgdiv">
+                  <input class="form-control" value={{this.part.img}} id="myimg">
+                  <button class="btn-primary btn-simple btn" id="imgbtn" (click)="editImg()">done</button>
+                </div>
+  
+  
+                <div class="name">
+                  <h3 class="title">Part name : {{this.part.name}}<button class="btn btn-simple btn-primary btn-sm" (click)="showName()">Edit</button></h3>
+                </div>
+                <div class="col-md-12" id="namediv">
+                  <input class="form-control" value={{this.part.name}} id="myname">
+                  <button class="btn-primary btn-simple btn" id="namebtn" (click)="editName()">done</button>
+                </div>
+  
+              </div>
+            </div>
+            <div class="description text-center">
+              <p>Description: {{this.part.description}}<button class="btn btn-simple btn-primary btn-sm" (click)="showDescription()">Edit</button></p>
+            </div>
+            <div class="col-md-12" id="descriptiondiv" align="center">
+              <textarea class="form-control" value={{this.part.description}} id="mydescription"></textarea>
+              <button class="btn-primary btn-simple btn" id="descriptionbtn" (click)="editDescription()">done</button>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="profile-tabs">
+                  <div class="name" align="center">
+                    <h3 class="title">Vehicle Type <button class="btn btn-simple btn-primary btn-sm" (click)="showType()">Edit</button></h3>
+                    <div class="col-md-12" id="typediv">
+                      <input class="form-control" value={{this.part.vehicle_type}} id="mytype" >
+                      <button class="btn-primary btn-simple btn" id="typebtn" (click)="editType()">done</button>
+                    </div>
+                    
+                  </div> 
+  
+                  <div class="name" align="center">
+                    <h3 class="title">Vehicle Condition <button class="btn btn-simple btn-primary btn-sm" (click)="showCondition()">Edit</button></h3>
+                    <div class="col-md-12" id="conditiondiv">
+                      <input class="form-control" value={{this.part.condition}} id="mycondition" >
+                      <button class="btn-primary btn-simple btn" id="conditionbtn" (click)="editCondition()">done</button>
+                    </div>
+                    
+                  </div>
+  
+                  <div class="name" align="center">
+                    <h3 class="title">Brand <button class="btn btn-simple btn-primary btn-sm" (click)="showBrand()">Edit</button></h3>
+                    <div class="col-md-12" id="branddiv">
+                      <input class="form-control" value={{this.part.brand}} id="mybrand" >
+                      <button class="btn-primary btn-simple btn" id="brandbtn" (click)="editBrand()">done</button>
+                    </div>
+                    
+                  </div>
+
+
+                </div>
+  
+                
+              </div>
+              <div class="name" align="center">
+                <h3 class="title">Price <button class="btn btn-simple btn-primary btn-sm" (click)="showPrice()">Edit</button></h3>
+                <p>{{this.part.price}}</p>
+              </div>
+              <div class="col-md-12" id="pricediv" align="center">
+                <input class="form-control" value={{this.part.price}} id="myprice">
+                <button class="btn-primary btn-simple btn" id="pricebtn" (click)="editPrice()">done</button>
+              </div>
+  
+            </div>
+
+            <div class="row">
+              <div class="col-md-12" align="center">
+                <button class="btn btn-primary" (click)="this.doneEditing()">Done Editing</button>
+                <button class="btn btn-danger" (click)="cancelEditing()">Cancel Editing</button>
+              </div>
+              
+
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  </body>
+  

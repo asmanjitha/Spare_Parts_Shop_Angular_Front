@@ -1,0 +1,27 @@
+<div class="card card-nav-tabs" style="background-color: #f8f1f5">
+  <div class="header" style="background-color: #fff8fc;
+  background-size: cover">
+    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+    <img class="img-src" src="{{Part.img}}" height="100%" width="100%">
+  </div>
+  <div class="content">
+    <h3 class="header-primary text-center">{{Part.name}}</h3>
+    <!-- <h3 class="header-primary text-center">Name</h3> -->
+    <div class="tim-row" style="background-color: #7b1fa2;">
+      <h3 class="text-center" style="color:#ffffff;">Price: $ {{Part.price}} </h3>
+      <!-- <h4 class="text-center" style="color:#ffffff;">{{Part.rating}}</h4> -->
+    </div>
+    
+    <div class="tab-content text-center">
+      <div class="tab-pane active">
+        <p>{{Part.description}} </p>
+        <!-- <p>This is description</p> -->
+      </div>
+      <div>
+        <!-- <a [routerLink] = "['/part',Part._id]"><button class="btn btn-primary">View</button></a> -->
+        <a (click)= "addToCart()"><button class="btn btn-success">Buy</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
